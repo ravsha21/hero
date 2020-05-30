@@ -1,11 +1,16 @@
 <div *ngIf="hero">
+  <!-- name of hero -->
   <h2>{{hero.name | uppercase}} Details</h2>
+
+  <!-- show hero id -->
   <div><span>id: </span>{{hero.id}}</div>
   <div>
+    <!-- show hero name -->
     <label>name:
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
   </div>
+  <!-- add buttons for save changes and go back on dashboard -->
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
 </div>

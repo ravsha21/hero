@@ -31,22 +31,22 @@ h4 {
 .module {
   padding: 20px;
   text-align: center;
-  color: #eee;
+  color: #000;
   max-height: 120px;
   min-width: 120px;
-  background-color: #3f525c;
+  background-color: #ccc;
   border-radius: 2px;
 }
 .module:hover {
-  background-color: #EEE;
+  background-color: #000;
   cursor: pointer;
-  color: #607d8b;
+  color: #ccc;
 }
 .grid-pad {
   padding: 10px 0;
 }
 .grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px;
+  padding-right: 22px;
 }
 @media (max-width: 600px) {
   .module {

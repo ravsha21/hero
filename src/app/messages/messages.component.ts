@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+/* import data from message services */
 import { MessageService } from '../message.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
-
+ /* get messages */
   constructor(public messageService: MessageService) {}
 
   ngOnInit() {

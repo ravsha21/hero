@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-
+/* Import hero files to get hero details  */
 import { Hero }         from '../hero';
 import { HeroService }  from '../hero.service';
 
@@ -11,6 +11,7 @@ import { HeroService }  from '../hero.service';
   styleUrls: [ './hero-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit {
+  /* get input data */
   @Input() hero: Hero;
 
   constructor(
@@ -18,21 +19,21 @@ export class HeroDetailComponent implements OnInit {
     private heroService: HeroService,
     private location: Location
   ) {}
-
+  
   ngOnInit(): void {
     this.getHero();
   }
-
+  /* get hero details according to id */
   getHero(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
   }
-
+  /* go back to go back on dashboard */
   goBack(): void {
     this.location.back();
   }
-
+  /* update hero details */
   save(): void {
     this.heroService.updateHero(this.hero)
       .subscribe(() => this.goBack());

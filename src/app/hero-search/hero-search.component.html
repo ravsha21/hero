@@ -1,8 +1,8 @@
 <div id="search-component">
   <h4><label for="search-box">Hero Search</label></h4>
-
+  <!-- insert value to search something  -->
   <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-
+  <!-- show hero name if matched with search letters -->
   <ul class="search-result">
     <li *ngFor="let hero of heroes$ | async" >
       <a routerLink="/detail/{{hero.id}}">

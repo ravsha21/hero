@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-/* main page title  */
+/* describe main page title  */
 export class AppComponent {
   title = 'Tour of Heroes';
 }
